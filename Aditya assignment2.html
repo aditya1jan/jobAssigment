@@ -1,0 +1,66 @@
+<!-- Done-->
+    
+<!DOCTYPE html>
+<html>
+<head>     
+    <script>
+        xorResult = () => {
+            let inputValue = document.getElementById('input').value;
+
+            var result=[]
+            var values=[];
+            for(var i=0; i<inputValue; i++)
+                {   
+                    values[i]=prompt("Enter L R "+inputValue+" times")
+                }
+
+            for(var j=0; j<inputValue; j++)
+                {
+                    let range = values[j].split(" ")
+                    let L = parseInt(range[0]);
+                    let R = parseInt(range[1]);
+                    let sum = (L-R)+1;
+                    let todd;
+                    let xor;
+                    if(sum%2==0)
+                    {
+                        todd = sum/2;
+                    }else{
+                        if(L%2==0 && R%2==0){
+                            todd = parseInt(sum/2)
+                        }else{
+                            todd = (sum/2)+1
+                        }
+                    }
+                    if(todd%2==0){
+                        xor= "EVEN"
+                    }else{
+                        xor= "ODD"
+                    }
+                    result[j]=xor
+                }
+
+            document.getElementById('output').innerHTML=result
+        }
+    </script>  
+</head>
+<body>
+
+<h3>XOR of all the numbers in range L to R (L,R both inclusive) is odd or even</h3>
+
+<label for="input">Enter total number of Inputs</label><br/>
+<input type="text" id="input" height="50px" width="100px"/>
+<br/>
+
+<button type="button" onclick={xorResult()}>Submit</button><br/>
+<br/>
+<label for="output">Output</label><br/>
+<textarea id="output"  cols="50"></textarea>
+<div width="100%" text-align="center">
+</div>
+
+</body>
+</html>
+
+
+

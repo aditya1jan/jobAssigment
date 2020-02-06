@@ -1,0 +1,36 @@
+<!-- Done-->
+<!DOCTYPE html>
+<html>
+<head>     
+    <script>
+        sortStrings = () => {
+            let inputValue = document.getElementById('input').value;
+            var stringsArray=[];
+            for(var i=0; i<inputValue; i++)
+                {   
+                    stringsArray[i]=prompt("Enter "+inputValue+" String")
+                }
+            var result = stringsArray.sort()
+            document.getElementById("output").innerHTML=result.toString()
+        } 
+    </script>  
+</head>
+<body>
+
+<h3>Sort the strings according to their first character</h3>
+
+<label for="input">Enter total number of Inputs</label><br/>
+<input type="text" id="input" height="50px" width="100px"/>
+<br/>
+
+<button type="button" onclick={sortStrings()}>Submit</button><br/>
+<br/>
+<label for="output">Output</label><br/>
+<textarea id="output" cols="50"></textarea>
+<div width="100%" text-align="center">
+</div>
+
+</body>
+</html>
+
+

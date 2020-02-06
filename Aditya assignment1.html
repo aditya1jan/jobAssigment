@@ -1,0 +1,38 @@
+<!-- Done-->
+    
+<!DOCTYPE html>
+<html>
+<head>     
+    <script>
+        secondsToHMS= () => {
+            let i = document.getElementById('input').value;
+            console.log("input = " + i);
+            let s = parseInt(i%60);
+            let m = parseInt((i/60)%60);
+            let h = parseInt((i/60)/60)
+            document.getElementById('result').innerHTML="Hours = "+h+", Minutes = "+m+", Seconds = "+s;
+
+        }
+    </script>  
+</head>
+<body>
+
+<h3>Get number of hours, minutes and seconds from number of seconds</h3>
+
+<label for="input">Enter number of seconds</label><br/>
+<input type="text" id="input" height="50px" width="100px"/>
+<br/>
+<br/>
+
+<button type="button" onclick={secondsToHMS()}>Submit</button><br/>
+<br/>
+<label for="result">Output</label><br/>
+
+<textarea id="result" cols="50"></textarea>
+<div width="100%" text-align="center">
+</div>
+
+</body>
+</html>
+
+
