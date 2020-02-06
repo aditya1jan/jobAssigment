@@ -8,7 +8,7 @@
             var stringsArray=[];
             for(var i=0; i<inputValue; i++)
                 {   
-                    stringsArray[i]=prompt("Enter "+inputValue+" String")
+                    stringsArray[i]=prompt("Enter "+(i+1)+" String")
                 }
             var result = stringsArray.sort()
             document.getElementById("output").innerHTML=result.toString()
